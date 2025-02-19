@@ -1,10 +1,11 @@
 import requests
 import asyncio
+import os
 from telegram import Bot
 
 # Set up Telegram bot with your bot token and chat ID
-bot_token = '8146516826:AAE_y7zgsvuvYBig48Npwewga0QxNSrJ_aQ'  # Replace with your Telegram bot token
-chat_id = '1529697706'  # Replace with your Telegram chat ID
+bot_token = os.getenv('BOT_TOKEN')  # Replace with your Telegram bot token
+chat_id = os.getenv('CHAT_ID')  # Replace with your Telegram chat ID
 bot = Bot(token=bot_token)
 
 # Set up the target price level for Bitcoin (daily high example)

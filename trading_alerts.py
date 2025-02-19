@@ -1,3 +1,15 @@
+import requests
+import asyncio
+from telegram import Bot
+
+# Set up Telegram bot with your bot token and chat ID
+bot_token = '8146516826:AAE_y7zgsvuvYBig48Npwewga0QxNSrJ_aQ'  # Replace with your Telegram bot token
+chat_id = '1529697706'  # Replace with your Telegram chat ID
+bot = Bot(token=bot_token)
+
+# Set up the target price level for Bitcoin (daily high example)
+target_price_bitcoin = 25000  # You can adjust this value
+
 # CoinGecko API endpoint for simple price data
 url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd'
 
@@ -21,3 +33,4 @@ if bitcoin_price >= target_price_bitcoin:
 
 # Output to the console
 print(f"Bitcoin price: ${bitcoin_price}")
+

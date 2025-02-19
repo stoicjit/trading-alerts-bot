@@ -83,7 +83,9 @@ def check_conditions():
             alert_message += "BTC Hourly fakeout below a previous daily low! \n"
 
     if alert_message:
-        bot.send_message(chat_id=CHAT_ID, text=alert_message)
+        async def send_telegram_message():
+            await bot.send_message(chat_id=CHAT_ID, text=alert_message)
+        asyncio.run(send_telegram_message())
 
 
 # Run the check every hour

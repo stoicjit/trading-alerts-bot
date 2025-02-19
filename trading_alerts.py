@@ -72,7 +72,7 @@ def check_conditions():
     if hourly_high is None:
         return  # Skip if data couldn't be fetched
 
-    alert_message = ""
+    alert_message = "test"
 
     for h in filtered_highs:
         if hourly_high > h and hourly_close < h:  # Fakeout: Breaks above but closes below

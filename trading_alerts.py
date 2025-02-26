@@ -10,11 +10,11 @@ CHAT_ID = os.getenv('CHAT_ID')  # Replace with your Telegram chat ID
 bot = Bot(token=bot_token)
 
 # Define the trading pair and exchange
-symbols = ["BTCUSD", 'ETHUSD', "XRPUSD"]
+symbols = ["BTCUSD", 'ETHUSD', "XRPUSD","DOGEUSD", "LTCUSD", "ADAUSD", "DOTUSD"]
 exchange = "BINANCE"  # Use your preferred exchange
 w_list=[]
 h_list=[]
-compare_list=[0,1,2]
+compare_list=[0,1,2,3,4,5,6]
 
 def weekly_rsi():
     for symbol in symbols:

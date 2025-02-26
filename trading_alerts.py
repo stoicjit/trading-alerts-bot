@@ -63,13 +63,11 @@ def compare_rsi():
                 message=f'{symbols[x]} just flashed on the rsi'
                 await bot.send_message(chat_id=CHAT_ID, text=message)
             asyncio.run(send_telegram_message())
-        else:
-            async def send_telegram_message():
-                message='nothing here'
-                await bot.send_message(chat_id=CHAT_ID, text=message)
-            asyncio.run(send_telegram_message())
-
 
 weekly_rsi()
 four_hour_rsi()
 compare_rsi()
+async def send_telegram_message():
+    message='nothing here'
+    await bot.send_message(chat_id=CHAT_ID, text=message)
+asyncio.run(send_telegram_message())
